@@ -1,0 +1,66 @@
+{
+  "info": {
+    "name": "Healthcare API",
+    "_postman_id": "12345678-abcd-efgh-ijkl-1234567890ab",
+    "description": "Postman collection for testing Doctor and Patient API endpoints",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Add Doctor",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Dr. Test\",\n  \"city\": \"Delhi\",\n  \"email\": \"dr.test@hospital.com\",\n  \"phoneNumber\": \"9876543210\",\n  \"speciality\": \"Orthopaedic\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8082/doctor/add",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "doctor",
+            "add"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Add Patient",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Patient Test\",\n  \"city\": \"Delhi\",\n  \"email\": \"patient.test@healthcare.com\",\n  \"phoneNumber\": \"9123456789\",\n  \"symptom\": \"Arthritis\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8082/patient/add",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "patient",
+            "add"
+          ]
+        }
+      }
+    }
+  ]
+}
